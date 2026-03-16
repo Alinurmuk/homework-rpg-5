@@ -1,31 +1,13 @@
 package com.narxoz.rpg.decorator;
 
 public abstract class ActionDecorator implements AttackAction {
-    private final AttackAction wrappedAction;
+    protected final AttackAction wrappedAction;
 
     protected ActionDecorator(AttackAction wrappedAction) {
         this.wrappedAction = wrappedAction;
     }
 
-    protected AttackAction getWrappedAction() {
-        return wrappedAction;
-    }
-
-    @Override
-    public String getActionName() {
-        // TODO: Delegate to wrapped action, then extend if needed.
-        return wrappedAction.getActionName();
-    }
-
-    @Override
-    public int getDamage() {
-        // TODO: Delegate to wrapped action, then extend if needed.
-        return wrappedAction.getDamage();
-    }
-
-    @Override
-    public String getEffectSummary() {
-        // TODO: Delegate to wrapped action, then extend if needed.
-        return wrappedAction.getEffectSummary();
-    }
+    @Override public String getActionName() { return wrappedAction.getActionName(); }
+    @Override public int getDamage() { return wrappedAction.getDamage(); }
+    @Override public String getEffectSummary() { return wrappedAction.getEffectSummary(); }
 }
