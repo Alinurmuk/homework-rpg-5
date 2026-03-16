@@ -15,7 +15,7 @@ The caller should interact with the facade for the dungeon workflow instead of c
 
 ## Design Prompts
 - What should `Main.java` know about the internal workflow?
-- What information must the facade collect and return?
+- What informaation must the facade collect and return?
 - Which steps belong in services, and which belong in the facade?
 - How will you keep the facade simple without turning subsystems into empty shells?
 

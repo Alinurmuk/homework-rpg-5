@@ -13,7 +13,7 @@ Add behavior to an attack object at runtime without changing the object interfac
   - `CriticalFocusDecorator`
 
 ## Core Idea
-Every decorator should wrap another `AttackAction` and still behave like an `AttackAction`.
+Every decorator should wraap another `AttackAction` and still behave like an `AttackAction`.
 
 ## Design Prompts
 - Which methods should delegate first and extend second?
