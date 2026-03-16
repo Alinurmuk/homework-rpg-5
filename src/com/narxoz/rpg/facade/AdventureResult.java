@@ -10,32 +10,21 @@ public class AdventureResult {
     private String reward;
     private final List<String> log = new ArrayList<>();
 
-    public String getWinner() {
-        return winner;
-    }
+    public String getWinner() { return winner; }
+    public void setWinner(String winner) { this.winner = winner; }
 
-    public void setWinner(String winner) {
-        this.winner = winner;
-    }
+    public int getRounds() { return rounds; }
+    public void setRounds(int rounds) { this.rounds = rounds; }
 
-    public int getRounds() {
-        return rounds;
-    }
-
-    public void setRounds(int rounds) {
-        this.rounds = rounds;
-    }
-
-    public String getReward() {
-        return reward;
-    }
-
-    public void setReward(String reward) {
-        this.reward = reward;
-    }
+    public String getReward() { return reward; }
+    public void setReward(String reward) { this.reward = reward; }
 
     public void addLine(String line) {
         log.add(line);
+    }
+
+    public void addLine(int index, String line) {
+        log.add(index, line);
     }
 
     public List<String> getLog() {
