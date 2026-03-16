@@ -9,21 +9,9 @@ public class HeroProfile {
         this.health = health;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getHealth() {
-        return health;
-    }
-
-    public void takeDamage(int amount) {
-        // TODO: Decide how health should be reduced and clamped.
-        health -= amount;
-    }
-
-    public boolean isAlive() {
-        // TODO: Decide whether additional conditions belong here.
-        return health > 0;
-    }
+    public String getName() { return name; }
+    public int getHealth() { return health; }
+    public void takeDamage(int amt) { this.health = Math.max(0, this.health - amt); }
+    public void heal(int amt) { this.health += amt; }
+    public boolean isAlive() { return health > 0; }
 }
